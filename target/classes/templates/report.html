@@ -1,0 +1,65 @@
+<html>
+    <body>
+        <form action="#" th:action="@{/}" th:object="${report}" method="post">
+            <table>
+            
+            	<tr>
+                    <td>City:</td>
+                    <td><input type="text" th:field="*{city}" /></td>
+                    <td th:if="${#fields.hasErrors('city')}" th:errors="*{city}">city Error</td>
+                </tr>
+				
+				<tr>
+                    <td>SchoolName:</td>
+                    <td><input type="text" th:field="*{schoolName}" /></td>
+                    <td th:if="${#fields.hasErrors('schoolName')}" th:errors="*{schoolName}">schoolName Error</td>
+                </tr>
+				
+				
+				<tr>
+                    <td>YearlyDropOutNumber:</td>
+                    <td><input type="text" th:field="*{yearlyDropOutNumber}" /></td>
+                    <td th:if="${#fields.hasErrors('yearlyDropOutNumber')}" th:errors="*{yearlyDropOutNumber}">YearlyDropOutNumber Error</td>
+                </tr>
+				
+				<tr>
+                    <td>GradeLevel:</td>
+                    <td><input type="text" th:field="*{gradeLevel}" /></td>
+                    <td th:if="${#fields.hasErrors('gradeLevel')}" th:errors="*{gradeLevel}">gradeLevel Error</td>
+                </tr>
+				
+				<tr>
+                    <td>AgeRange:</td>
+                    <td><input type="text" th:field="*{ageRange}" /></td>
+                    <td th:if="${#fields.hasErrors('ageRange')}" th:errors="*{ageRange}">ageRange Error</td>
+                </tr>
+				
+				<tr>
+                    <td>Reason:</td>
+                    <td><input type="text" th:field="*{reason}" /></td>
+                    <td th:if="${#fields.hasErrors('reason')}" th:errors="*{reason}">reason Error</td>
+                </tr>
+				
+				<tr>
+                    <td>DropOutContactInfo:</td>
+                    <td><input type="text" th:field="*{dropOutContactInfo}" /></td>
+                    <td th:if="${#fields.hasErrors('dropOutContactInfo')}" th:errors="*{dropOutContactInfo}">dropOutContactInfo Error</td>
+                </tr>
+				
+				
+				<tr>
+                    <td>ReportingPersonContact:</td>
+                    <td><input type="text" th:field="*{ReportingPersonContact}" /></td>
+                    <td th:if="${#fields.hasErrors('ReportingPersonContact')}" th:errors="*{ReportingPersonContact}">ReportingPersonContact Error</td>
+                </tr>
+				
+                
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+       
+        <a href="/"> Return to Home Page </a>
+    </body>
+</html>
